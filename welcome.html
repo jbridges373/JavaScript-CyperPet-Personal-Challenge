@@ -1,24 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style1.css">
-    <title>Welcome Page</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Cyber Pets</title>
 </head>
+
 <body>
-    
-    <div class="container">
-        <div class="ring"></div>
-        <div class="ring"></div>
-        <div class="ring"></div>
-        <p>Welcome to Cyber Pet</p>
-        <button class="play"><a href=index.html>START</a></button>
-        <audio controls autoplay> 
-            <source src="sound/sound2.mp3">
-        </audio> 
-    </div>
-    
+   <div class="wrapper">
+      <header>
+         <h1>Cyber Pets</h1>
+      </header>
+      <main class="main-content">
+         <div id="welcome-screen">
+            <p class="intro-text">Create &amp; take care of your own virtual pet. Choose an animal below to get
+               started.</p>
+            <div class="image-group">
+               <div class="image">
+                  <img src="images/animal-dog.jpg" alt="" id="dog-img"
+                     class="animal-img dog-img">
+               </div>
+               <div class="image">
+                  <img src="images/animal-parrot.jpg" alt="" id="parrot-img"
+                     class="animal-img parrot-img">
+               </div>
+               <div class="image">
+                  <img src="images/animal-turtle.jpg" alt="" id="turtle-img"
+                     class="animal-img turtle-img">
+               </div>
+            </div>
+         </div>
+         <div class="pet-interface" id="pet-interface">
+            <div class="pet-info">
+               <div class="main-image">
+                  <img src="#" alt="pet" class="pet-img" id="pet-img">
+               </div>
+               <div class="pet-stats" id="pet-stats">
+                  <p><span class="pet-stats-style">Name: </span><span id="insert-name"></span></p>
+                  <label for="happiness-level" class="pet-stats-style">Happiness: </label>
+                  <progress id="happiness-level" max="100" value="40"></progress>
+                  <p id="pet-emotion" class="pet-emotion"></p>
+               </div>
+            </div>
+            <div class="buttons">
+               <button class="action-button" id="feed-button">Feed</button>
+               <button class="action-button" id="stroke-button">Stroke</button>
+               <button class="action-button" id="wash-button">Wash</button>
+               <button class="action-button" id="play-button">Play</button>
+            </div>
+            <p class="start-again" id="start-again">Start again</p>
+            <embed src="sound/funGame.mp3" loop="true" autostart="true" width="2" height="0">
+         </div>
+      </main>
+
+      <footer class="footer">{CN} Master 38 J.Bridges & J.Lindsay</footer>
+      
+
+   </div>
+
+   <script src="main.js"></script>
+   <script src="app.js"></script>
 </body>
+
 </html>
